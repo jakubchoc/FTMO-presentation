@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active: dev
+  jooq:
+    sql-dialect: POSTGRES
+  datasource:
+    url: jdbc:postgresql://localhost:5432/presentationdb
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    locations: classpath:db/migration
+    enabled: true
+    out-of-order: false
+logging:
+  level:
+    root: INFO
+    org.jooq.tools.LoggerListener: TRACE
+    org:
+      springframework:
+        test:
+          context:
+            cache: DEBUG

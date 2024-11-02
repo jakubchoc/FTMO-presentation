@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date %level [%thread] %logger{10} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.jooq" level="DEBUG"/>
+    <logger name="org.jooq.tools.LoggerListener" level="DEBUG"/>
+
+    <root level="INFO">
+        <appender-ref ref="Console"/>
+    </root>
+</configuration>
